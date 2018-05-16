@@ -11,7 +11,7 @@ namespace MVC1.Controllers
         {
             List<Categoria> categorias = new List<Categoria>();
 
-            categorias.Add(new Categoria() { id= 1, Nome = "casa", Ativo = true });
+            categorias.Add(new Categoria() { id = 1, Nome = "casa", Ativo = true });
             categorias.Add(new Categoria() { id = 2, Nome = "carro", Ativo = true });
             categorias.Add(new Categoria() { id = 3, Nome = "cabeça", Ativo = true });
             categorias.Add(new Categoria() { id = 4, Nome = "casco", Ativo = true });

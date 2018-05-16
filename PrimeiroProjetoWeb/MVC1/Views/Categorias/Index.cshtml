@@ -4,11 +4,20 @@
 }
 
 <h2>Index</h2>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Nome</th>
+        <th>Ativo</th>
 
-@foreach(Categoria cat in ViewBag.MinhasCategorias)
-{
-    <p>@cat.id</p>
-    <p>@cat.Nome</p>
-    <p>@cat.Ativo</p>
-}
+    </tr>
+    @foreach (Categoria cat in ViewBag.MinhasCategorias)
+    {
+        <tr>
+            <td>@cat.id</td>
+            <td>@cat.Nome</td>
+            <td>@cat.Ativo</td>
+        </tr>
+    }
+</table>
 
