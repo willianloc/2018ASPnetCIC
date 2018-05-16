@@ -1,12 +1,14 @@
-﻿
+﻿@using MVC1.Models;
 @{
     ViewBag.Title = "Index";
 }
 
-<h2>@ViewBag.Title</h2>
+<h2>Index</h2>
 
-@foreach(string cat in ViewBag.MinhasCategorias)
+@foreach(Categoria cat in ViewBag.MinhasCategorias)
 {
-    <p>@cat</p>
+    <p>@cat.id</p>
+    <p>@cat.Nome</p>
+    <p>@cat.Ativo</p>
 }
 

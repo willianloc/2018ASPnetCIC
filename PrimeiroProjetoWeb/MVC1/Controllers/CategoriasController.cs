@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using MVC1.Models;
+using System.Collections.Generic;
 using System.Web.Mvc;
 
 namespace MVC1.Controllers
@@ -8,15 +9,14 @@ namespace MVC1.Controllers
         // GET: Categorias
         public ActionResult Index()
         {
-            List<string> categorias = new List<string>();
+            List<Categoria> categorias = new List<Categoria>();
 
-            categorias.Add("Estudo");
-            categorias.Add("Lesma");
-            categorias.Add("Jão");
-            categorias.Add("Trabalho");
+            categorias.Add(new Categoria() { id= 1, Nome = "casa", Ativo = true });
+            categorias.Add(new Categoria() { id = 2, Nome = "carro", Ativo = true });
+            categorias.Add(new Categoria() { id = 3, Nome = "cabeça", Ativo = true });
+            categorias.Add(new Categoria() { id = 4, Nome = "casco", Ativo = true });
 
             ViewBag.MinhasCategorias = categorias;
-
             return View();
         }
     }
