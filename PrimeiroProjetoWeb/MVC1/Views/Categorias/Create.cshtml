@@ -1,0 +1,40 @@
+﻿@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm())
+{
+    @*Formulario versao 1 (usando model)
+        @Html.TextBoxFor(x=> x.Nome)
+        <br />
+        <br />
+        @Html.TextBoxFor(x=> x.Ativo)
+        <br />
+        <br />
+        <input type="submit" value="Salvar" />
+    *@
+
+    // Formulario versao 2
+    @Html.DisplayNameFor(m => m.Nome)  //cria label do campo
+    @Html.EditorFor(m => m.Nome)
+    @Html.ValidationMessageFor(m => m.Nome)
+    <br />
+    <br />
+    @Html.DisplayNameFor(m => m.Ativo)
+    @Html.EditorFor(m => m.Ativo)
+    <br />
+    <br />   
+
+    @* Formulario v3 (usando model, formulario completo)
+        @Html.EditorForModel()
+        <input type="submit" value="Salvar" />
+    *@
+    <input type="submit" value="Salvar" />
+}
+
+@section Scripts{
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
