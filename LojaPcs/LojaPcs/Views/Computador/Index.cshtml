@@ -1,0 +1,45 @@
+﻿@model IEnumerable<LojaPcs.Models.Computador>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.QtdRam)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.QtdGpu)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.QtdHd)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.QtdRam)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.QtdGpu)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.QtdHd)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ComputadorId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ComputadorId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ComputadorId })
+        </td>
+    </tr>
+}
+
+</table>

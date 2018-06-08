@@ -1,0 +1,42 @@
+﻿@model LojaPcs.Models.Computador
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Computador</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.QtdRam)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.QtdRam)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.QtdGpu)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.QtdGpu)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.QtdHd)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.QtdHd)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ComputadorId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
