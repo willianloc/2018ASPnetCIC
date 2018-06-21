@@ -4,41 +4,76 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Carrinho</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
+
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.QtdRam)
+            Gabinete
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.QtdGpu)
+            Processador
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.QtdHd)
+           Placa mãe
         </th>
-        <th></th>
+        <th>
+            Ram
+        </th>
+        <th>
+            Quantidade Ram
+        </th>
+        <th>
+           Placa de vídeo
+        </th>
+        <th>
+            Quantidade de GPUs
+        </th>
+        <th>
+            Fonte
+        </th>
+        <th>
+            Hd
+        </th>
+        <th>
+           Quantidade Hd
+        </th>
+
     </tr>
 
 @foreach (var item in Model) {
     <tr>
         <td>
+            @Html.DisplayFor(modelItem => item.Gabinete.Nome);
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Processador.Nome);
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Placamae.Nome);
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ram.Nome);
+        </td>
+        <td>
             @Html.DisplayFor(modelItem => item.QtdRam)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Gpu.Nome)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.QtdGpu)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.QtdHd)
+            @Html.DisplayFor(modelItem => item.Fonte.Nome)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ComputadorId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ComputadorId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ComputadorId })
+            @Html.DisplayFor(modelItem => item.Hd.Nome)
         </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.QtdHd)
+        </td>       
     </tr>
 }
 
