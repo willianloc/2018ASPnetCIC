@@ -25,7 +25,7 @@ namespace LojaPcs.Models
 
         public DbSet<Ram> Rams { get; set; }
 
-        public DbSet<Computador> Computadors { get; set; }
+        public DbSet<Computador> Computadores { get; set; }
 
         public DbSet<Venda> Vendas { get; set; }
 
